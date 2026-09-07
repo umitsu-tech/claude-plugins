@@ -4,15 +4,15 @@
 
 | プラグイン | 中身 | リポジトリ |
 |---|---|---|
-| discord-bot | Claude Code の Discord チャンネルセッションを Discord 側から管理する | https://github.com/ryuki-imachi/claude-code-discord-bot |
-| blog-skills | ブログ執筆スキル一式（投稿前レビュー、Qiita 投稿準備、投稿後の後片付け、drawio 図の書き出し） | https://github.com/ryuki-imachi/blog-skills |
+| discord-bot | Claude Code の Discord チャンネルセッションを Discord 側から管理する | https://github.com/umitsu-tech/claude-code-discord-bot |
+| blog-skills | ブログ執筆スキル一式（投稿前レビュー、Qiita 投稿準備、投稿後の後片付け、drawio 図の書き出し） | https://github.com/umitsu-tech/blog-skills |
 
 ## 使い方
 
 マーケットプレイスを一度登録すると、`<プラグイン名>@ryuki-plugins` でインストールできます。
 
 ```
-claude plugin marketplace add ryuki-imachi/claude-plugins
+claude plugin marketplace add umitsu-tech/claude-plugins
 claude plugin install blog-skills@ryuki-plugins
 claude plugin install discord-bot@ryuki-plugins --scope project
 ```
@@ -36,7 +36,7 @@ ln -s ../claude-code-discord-bot discord-bot
 claude plugin marketplace add ~/claude-plugins-local
 ```
 
-GitHub 版に戻すときは `claude plugin marketplace add ryuki-imachi/claude-plugins` を再実行します。
+GitHub 版に戻すときは `claude plugin marketplace add umitsu-tech/claude-plugins` を再実行します。
 
 ## ライセンス
 
