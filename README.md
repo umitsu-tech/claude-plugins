@@ -21,13 +21,22 @@ claude plugin install discord-bot@ryuki-plugins --scope project
 
 ## 開発中のプラグインを試す
 
-このリポジトリを clone し、`marketplace.json` の該当プラグインの `source` を手元のパス（このファイルからの相対パス、例 `../blog-skills`）に書き換えてから、clone したディレクトリを登録します。
+`marketplace.json` の `source` にはマーケットプレイスの直下より上（`..` を含むパス）を指定できないので、手元のリポジトリを指す登録用ディレクトリを別に作り、その中にシンボリックリンクを置きます。
 
 ```
-claude plugin marketplace add ~/path/to/claude-plugins
+mkdir -p ~/claude-plugins-local/.claude-plugin
+cd ~/claude-plugins-local
+ln -s ../blog-skills blog-skills
+ln -s ../claude-code-discord-bot discord-bot
 ```
 
-同じ名前（ryuki-plugins）の登録は1つしか持てないので、GitHub 版に戻すときは `claude plugin marketplace add ryuki-imachi/claude-plugins` を再実行して置き換えます。
+`.claude-plugin/marketplace.json` はこのリポジトリのものをコピーし、`source` を `"./blog-skills"` のようにリンク名へ書き換えます。そのディレクトリを登録すると、同じ名前（ryuki-plugins）の登録が置き換わり、`claude plugin install <名前>@ryuki-plugins` で手元のリポジトリから入ります。
+
+```
+claude plugin marketplace add ~/claude-plugins-local
+```
+
+GitHub 版に戻すときは `claude plugin marketplace add ryuki-imachi/claude-plugins` を再実行します。
 
 ## ライセンス
 
