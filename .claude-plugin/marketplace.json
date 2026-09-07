@@ -2,17 +2,17 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "ryuki-plugins",
   "owner": {
-    "name": "ryuki-imachi"
+    "name": "umitsu-tech"
   },
   "metadata": {
-    "description": "ryuki-imachi の自作 Claude Code プラグインの配布元"
+    "description": "umitsu-tech の自作 Claude Code プラグインの配布元"
   },
   "plugins": [
     {
       "name": "discord-bot",
       "source": {
         "source": "github",
-        "repo": "ryuki-imachi/claude-code-discord-bot"
+        "repo": "umitsu-tech/claude-code-discord-bot"
       },
       "description": "Claude Code の Discord チャンネルセッションを Discord 側から管理する。/ctx でコンテキスト使用量を返し、/clear で新しいセッションに切り替え、Bot のステータスに使用量を常時表示する"
     },
@@ -20,7 +20,7 @@
       "name": "blog-skills",
       "source": {
         "source": "github",
-        "repo": "ryuki-imachi/blog-skills"
+        "repo": "umitsu-tech/blog-skills"
       },
       "description": "ブログ執筆スキル一式。投稿前レビュー・Qiita 投稿準備・投稿後の後片付け・drawio 図の書き出し"
     }
